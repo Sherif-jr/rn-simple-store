@@ -17,8 +17,8 @@ A simple React Native application that displays a list of products, allows users
 
 ## Screenshots
 
-| ![screenshot1](https://github.com/user-attachments/assets/21c1a8ee-a976-42e6-bced-653c0e7b19cb) | ![screenshot2](https://github.com/user-attachments/assets/afbf49db-10dc-4a2e-84c1-811a0aa66559) |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| ![screenshot1](https://github.com/user-attachments/assets/0513b2b0-5375-4b32-bd7d-cf5c387d3ada) | ![screenshot2](https://github.com/user-attachments/assets/976bff2e-b11d-4ef3-bb24-e29c5d02100a) | ![screenshot3](https://github.com/user-attachments/assets/fcdb19c2-27c8-4e70-a987-82e037615935) |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 
 ## Setup Instructions
 
