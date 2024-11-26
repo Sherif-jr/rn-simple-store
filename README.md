@@ -8,7 +8,7 @@ A simple React Native application that displays a list of products, allows users
 
 - **Product Listing**: Displays a list of products with their title, description, price, and image.
 - **Product Details**: Navigate to a detailed view of a selected product.
-- **Favorites**: Mark products as favorites and view them in a dedicated tab.
+- **Favorites**: Mark products as favorites.
 - **Navigation**: Smooth navigation between screens using Expo Router.
 - **API Integration**: Fetch product data from a public API.
 - **Responsive and User-Friendly UI**: Clean, modern, and easy-to-use design.
