@@ -59,4 +59,4 @@ Approach
 - [Screenshots, Demo APK, and coding video](https://drive.google.com/drive/folders/1mQ16i-08yLPMbcjgNUhz7Woa5w2U8aLz)
   ![google drive](https://github.com/user-attachments/assets/f5526ddf-b9db-4e0a-9698-0a77075730d7)
 
-- [Download demo apk directly from eas](https://expo.dev/artifacts/eas/36KJmuQ4SDsdmMhxMhN6Jc.apk)
+- [Download demo apk directly from eas](https://expo.dev/artifacts/eas/ifSoyK4eGGsrkwHzfa5ciE.apk)
