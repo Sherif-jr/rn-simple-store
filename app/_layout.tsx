@@ -1,15 +1,18 @@
+import FavoriteHeaderButton from "@/components/ui/FavoriteHeaderButton";
 import ResourceLoader from "@/providers/ResourceLoader";
 import store from "@/store";
+import { MaterialIcons } from "@expo/vector-icons";
 import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { router, Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { memo, useCallback, useEffect } from "react";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import "react-native-reanimated";
 import { Provider } from "react-redux";
 
@@ -26,9 +29,16 @@ export default function RootLayout() {
               name="index"
               options={{
                 headerTitle: "Products List",
+                headerRight(props) {
+                  return <FavoriteHeaderButton {...props} />;
+                },
               }}
             />
             <Stack.Screen name="[productId]" />
+            <Stack.Screen
+              name="favorites"
+              options={{ headerTitle: "Favorites" }}
+            />
             <Stack.Screen name="+not-found" />
           </Stack>
         </ResourceLoader>
