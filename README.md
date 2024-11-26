@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# RN Simple Store
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple React Native application that displays a list of products, allows users to view product details, and mark products as favorites. The app includes navigation, state management, caching, and API integration for dynamic data fetching.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
+- **Product Listing**: Displays a list of products with their title, description, price, and image.
+- **Product Details**: Navigate to a detailed view of a selected product.
+- **Favorites**: Mark products as favorites and view them in a dedicated tab.
+- **Navigation**: Smooth navigation between screens using Expo Router.
+- **API Integration**: Fetch product data from a public API.
+- **Responsive and User-Friendly UI**: Clean, modern, and easy-to-use design.
+
+---
+
+## Screenshots
+
+| ![screenshot1](https://github.com/user-attachments/assets/21c1a8ee-a976-42e6-bced-653c0e7b19cb) | ![screenshot2](https://github.com/user-attachments/assets/afbf49db-10dc-4a2e-84c1-811a0aa66559) |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js installed
+- Git installed
+
+### Installation
+
+1. Clone the repository:
    ```bash
-   npm install
+   git clone https://github.com/Sherif-jr/rn-simple-store.git
+   cd rn-simple-store
    ```
-
-2. Start the app
-
+2. Install dependencies:
    ```bash
-    npx expo start
+   yarn
    ```
+3. Run the app (Expo Go):
+   ```bash
+   yarn start
+   ```
+4. Scan the QR code with the Camera/Expo Go app (iOS or Android).
 
-In the output, you'll find options to open the app in a
+Approach
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Navigation: Implemented using Expo Router for file-based navigation. It's build on top of react-navigation and provides a simple and efficient way to navigate between screens.
+2. State Management: Used React's useState and redux-toolkit for state management.
+3. UI: Designed with React Native components and styled using StyleSheet.
+4. Favorites Feature: Added functionality to mark and view favorite products.
+5. API Integration: Used the Fake Store API to dynamically fetch product data, with graceful error handling and caching.
+6. Responsive UI: Implemented responsive design to ensure a consistent user experience across different screen sizes.
+7. User-Friendly UI: Designed a clean and modern UI with a consistent color scheme and typography.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Demo & Links
 
-## Get a fresh project
+- [Screenshots, Demo APK, and coding video](https://drive.google.com/drive/folders/1mQ16i-08yLPMbcjgNUhz7Woa5w2U8aLz)
+  ![google drive](https://github.com/user-attachments/assets/f5526ddf-b9db-4e0a-9698-0a77075730d7)
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Download demo apk directly from eas](https://expo.dev/artifacts/eas/36KJmuQ4SDsdmMhxMhN6Jc.apk)
