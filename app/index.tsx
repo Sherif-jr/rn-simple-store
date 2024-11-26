@@ -6,13 +6,15 @@ import {
   StyleSheet,
   RefreshControl,
   ActivityIndicator,
+  Alert,
 } from "react-native";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Product } from "@/interfaces/product.interface";
 import ProductCard from "@/components/ProductCard";
 import { router } from "expo-router";
 import useProducts from "@/hooks/useProducts";
 import { Colors } from "@/constants/Colors";
+import { capitalize } from "@/utils/helpers";
 
 const productsList = () => {
   const { products, isLoading, isFetching, fetchProducts, error } = useProducts(
@@ -32,6 +34,11 @@ const productsList = () => {
     ),
     []
   );
+  useEffect(() => {
+    if (error) {
+      return Alert.alert("Error", capitalize(error));
+    }
+  }, [error]);
   return (
     <View
       style={{
@@ -50,14 +57,24 @@ const productsList = () => {
         contentContainerStyle={styles.listContainer}
         ListEmptyComponent={() => (
           <View
-            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+            style={{
+              flexGrow: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             {isLoading ? (
               <ActivityIndicator color={Colors.light.tint} size="large" />
-            ) : error ? (
-              <Text>{error}</Text>
             ) : (
-              <Text>No products found</Text>
+              <Text
+                style={{
+                  textAlign: "center",
+                  color: Colors.light.tint,
+                  fontSize: 20,
+                }}
+              >
+                No products found
+              </Text>
             )}
           </View>
         )}
@@ -72,5 +89,6 @@ const styles = StyleSheet.create({
   listContainer: {
     paddingHorizontal: 10,
     paddingVertical: 15,
+    flexGrow: 1,
   },
 });
