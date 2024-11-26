@@ -16,6 +16,7 @@ import {
   addToFavoriteProducts,
   removeFromFavoriteProducts,
 } from "@/store/slices/userPrefSlice";
+import { formatPrice } from "@/utils/helpers";
 
 const ProductPage = () => {
   const { productId } = useLocalSearchParams<{ productId?: string }>();
@@ -66,7 +67,7 @@ const ProductPage = () => {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.price}>{product.price}</Text>
+        <Text style={styles.price}>{formatPrice(product.price)}</Text>
         <View style={[styles.divider, { marginVertical: 10 }]} />
         <View style={styles.descriptionContainer}>
           <Text style={styles.description}>{product.description}</Text>
@@ -125,6 +126,7 @@ const styles = StyleSheet.create({
   },
   price: {
     color: Colors.light.tint,
+    fontSize: 20,
   },
   button: {
     backgroundColor: Colors.light.tint,

@@ -9,6 +9,7 @@ import {
   removeFromFavoriteProducts,
 } from "@/store/slices/userPrefSlice";
 import { useAppSelector, useAppDispatch } from "@/hooks/reduxHooks";
+import { formatPrice } from "@/utils/helpers";
 interface ProductCardProps {
   product: Product;
   onPress?: () => void;
@@ -43,7 +44,7 @@ const ProductCard: FC<ProductCardProps> = memo(({ product, onPress }) => {
         </Text>
         <View style={styles.divider} />
         <View style={styles.footerContainer}>
-          <Text style={styles.price}>{product.price}</Text>
+          <Text style={styles.price}>{formatPrice(product.price)}</Text>
           <TouchableOpacity onPress={toggleFavorite}>
             <MaterialIcons
               name={isFavorite ? "favorite" : "favorite-border"}
